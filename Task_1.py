@@ -2,51 +2,27 @@
 # Найдите количество и выведите его.
 # list_1 = [1, 2, 3, 4, 5]
 # k = 3
-# # 1
-
-import random
-
-# n = int(input("Введите начальное число диапазона: "))
-# # m = int(input("Введите конечное число диапазона: "))
-# list_1 = [1, 2, 3, 4, 5]
-# k = int(input("Type a number: "))
-# count = 0
-# for i in list_1:
-#     if k == list_1[i]:
-#         count += 1
-#     else:
-#         print("Числа {k} в списке нет.")
-# print(f"Число {k} встречается {count} раз)
 
 
+# N = abs(int(input('Введите количество элементов списка А: ')))
+# print(N)
+# A_entered = input("Введите через пробел элементы списка: ").split()
+# print(A_entered, type(A_entered))
+# A_num = list(map(int, A_entered))
+# print(A_num, type(A_num))
+# if len(A_num) != N:
+#     print('Введенные элементы не соответствуют заявленному количеству!')
+# else:
+#     X = int(input('Введите число X, которое необходимо найти в списке: '))
+#     count = 0
+#     for i in range(N):
+#         if A_num[i] == X:
+#             count += 1
+#     print(f'Число {X} встречается в списке A {count} раз')
 
 
-# data = {}
-# data_second = dict()
-#
-# data["John"] = 23
-# data["Kate"] = 20
-# print(data["John"])
-# print(list(data.keys()))
-# print(list(data.values()))
-#
-# for i in data.keys():   # <-> data:
-#     print(i)
-#
-# for i in data.values():
-#     print(i, end=' ')
+list_1 = [1, 3, 3, 2, 3, 4, 5, 3, 3]
+k = 3
+print(list_1.count(k))
 
 
-# Task 21
-
-data = [{"V": "S001"}, {"V": "S002"},
-         {"VI": "S001"}, {"VI": "S005"},
-           {"VII": "S005"}, {"V":"S009"},
-             {"VIII":"S007"}]
-set_values = set()
-print(data[5])
-
-for i in data:
-    print(i)
-    set_values.add(i.values()[0])
-print(set_values)
