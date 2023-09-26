@@ -15,49 +15,60 @@
 # Й, Ы – 4 очка;
 # Ж, З, Х, Ц, Ч – 5 очков;
 
-k = 'Ноутбук'
-our_dict = {'A, E, I, O, U, L, N, S, T, R, А, В, Е, Ё, И, Й, Н, О, Р, С, Т': 1,
-            'D, G, Д, К, Л, М, П, У': 2,
-            'B, C, M, P, Б, Г, Ё, Ь, Ъ, Я': 3,
-            'F, H, V, W, Y, Й, Ш, Щ, Ы': 4,
-            'K, Ж, З, Х, Ц, Ч, Э, Ю': 5,
-            'J, X, Ф': 8,
-            'Q, Z': 10}
-
-a = k.upper()
-# print(a)
-# word = input("Type a word: ").upper()
-result = 0
-for char in a:
-    for key in our_dict:
-        if char in key:
-            result += our_dict[key]
-print(result)
-
-
-
-
-
-
-
-
-
-# dictionary = {1: 'A, E, I, O, U, L, N, S, T, R, А, В, Е, И, Н, О, Р, С, Т',
-#               2: 'D, G, Д, К, Л, М, П, У',
-#               3: 'B, C, M, P, Б, Г, Ё, Ь, Я',
-#               4: 'F, H, V, W, Y, Й, Ы',
-#               5: 'K, Ж, З, Х, Ц, Ч',
-#               8: 'J, X',
-#               10: 'Q, Z, Ф, Щ, Ъ'}
-# word = str(input('Enter a word: ').upper())
+# k = 'ящерица'
+# our_dict = {'A, E, I, O, U, L, N, S, T, R, А, В, Е, Ё, И, Й, Н, О, Р, С, Т': 1,
+#             'D, G, Д, К, Л, М, П, У': 2,
+#             'B, C, M, P, Б, Г, Ё, Ь, Я': 3,
+#             'F, H, V, W, Y, Й, Ы': 4,
+#             'K, Ж, З, Х, Ц, Ч': 5,
+#             'J, X, Ш, Э, Ю': 8,
+#             'Q, Z, Ф, Щ, Ъ': 10}
 #
-# score = 0
-# for char in word:
-#     for key in dictionary:
-#         if char in list(dictionary[key]):
-#             score += key
-#
-# print(score)
+# a = k.upper()
+# # print(a)
+# # word = input("Type a word: ").upper()
+# result = 0
+# for char in a:
+#     for key in our_dict:
+#         if char in key:
+#             result += our_dict[key]
+# print(result)
+
+
+# два словаря
+
+eng = 'qwertyuiopasdfghjklzxcvbnm'
+
+rus = 'йцукенгшщзхъфывапролджэячсмитьбюё'
+
+list_English = {1: 'AEIOULNSTR', 2: 'DG', 3: 'BCMP',
+                4: 'FHVWY', 5: "K", 8: 'JX', 10: 'QZ'}
+list_Russian = {1: 'АВЕИНОРСТ', 2: 'ДКЛМПУ', 3: 'БГЁЬЯ',
+                4: 'ЙЫ', 5: 'ЖЗХЦЧ', 8: 'ШЭЮ', 10: 'ФЩЪ'}
+
+word = input('Введите слово на русском или английском языке: ')
+
+if word[0].lower() in eng:
+    summa_1 = 0
+    for letter in word:
+        for key, value in list_English.items():
+            if letter.upper() in value:
+                summa_1 += key
+    print(f'стоимость введенного английского слова = {summa_1}')
+else:
+    if word[0].lower() in rus:
+        summa_2 = 0
+        for letter in word:
+
+            for key, value in list_Russian.items():
+                if letter.upper() in value:
+                    summa_2 += key
+    print(f'стоимость введенного русского слова = {summa_2}')
+
+
+
+
+
 
 # d = {
 #     1 : 'one',
